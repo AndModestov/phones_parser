@@ -1,6 +1,8 @@
 class BaseParser
   attr_reader :keyword, :base_url
 
+  PHONE_SERVICES = ['phonearea']
+
   def initialize(keyword)
     @keyword = keyword
     @base_url = "#{self.class.name}::BASE_URL".constantize

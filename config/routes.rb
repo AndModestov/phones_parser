@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   mount ActionCable.server => '/cable'
 
   resources :phones, only: %i(index) do
-    get 'get_dimentions', on: :collection
+    get 'get_info', on: :collection
   end
 end

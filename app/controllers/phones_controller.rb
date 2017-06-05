@@ -4,19 +4,19 @@ class PhonesController < ApplicationController
   def index
   end
 
-  def get_dimentions
+  def get_info
     phones_resource = params[:phones_resource]
     keyword = params[:keyword]
     channel = params[:channel]
 
-    GetPhoneDataJob.perform_later phones_resource, keyword, channel
+    GetPhonesInfoJob.perform_later phones_resource, keyword, channel
 
-    publish_to_channel channel
+    publish channel
   end
 
   private
 
-  def publish_to_channel channel
+  def publish channel
     ActionCable.server.broadcast(
       'phones_data',
       channel: channel,

@@ -1,4 +1,4 @@
-class GetPhoneDataJob < ApplicationJob
+class GetPhonesInfoJob < ApplicationJob
 
   def perform phones_resource, keyword, channel
     parser = "#{phones_resource}_parser".classify.constantize.new keyword
