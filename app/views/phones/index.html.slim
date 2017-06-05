@@ -1,9 +1,8 @@
 
 = form_tag get_info_phones_path, method: :get, remote: true, class: 'form-inline' do
-  .form-group
-    = text_field_tag :keyword, '', class: 'form-control', placeholder: 'keywords'
-    = select_tag :phones_resource, options_for_select(BaseParser::PHONE_SERVICES), class: 'form-control'
-    = hidden_field_tag :channel, @channel
-    = submit_tag 'Search', class: 'form-control'
+  = text_field_tag :keyword, '', class: 'form-control', placeholder: 'keywords'
+  = select_tag :phones_resource, options_for_select(BaseParser::PHONE_SERVICES), class: 'form-control'
+  = hidden_field_tag :channel, @channel
+  = submit_tag 'Search', class: 'form-control'
    
 div.main-text id="phones-data-#{@channel}"
