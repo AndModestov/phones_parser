@@ -1,0 +1,7 @@
+= form_tag get_dimentions_phones_path, method: :get, remote: true, class: 'navbar-form navbar-left' do
+  p = text_field_tag :keyword
+  p = text_field_tag :phones_resource
+  p = hidden_field_tag :channel, @channel
+  p = submit_tag 'Search', class: 'btn btn-primary'
+   
+div id="phones-data-#{@channel}"

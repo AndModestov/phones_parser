@@ -10,12 +10,14 @@ gem 'jbuilder'
 gem 'slim-rails'
 gem "therubyracer"
 gem 'twitter-bootstrap-rails' #, git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-gem 'responders'
 gem 'dotenv'
 gem 'dotenv-deployment', require: 'dotenv/deployment'
 gem 'redis-rails'
 gem 'nokogiri'
 gem 'typhoeus'
+gem 'sidekiq'
+gem 'sinatra', '>= 1.3.0', require: nil
+gem 'puma'
 
 gem 'sdoc', group: :doc
 

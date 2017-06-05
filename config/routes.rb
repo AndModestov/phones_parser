@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  require 'sidekiq/web'
+
+  root to: "phones#index"
+
+  mount Sidekiq::Web => '/sidekiq'
+  mount ActionCable.server => '/cable'
+
+  resources :phones, only: %i(index) do
+    get 'get_dimentions', on: :collection
+  end
 end
