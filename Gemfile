@@ -23,12 +23,12 @@ gem 'sdoc', group: :doc
 
 group :development do
   gem 'listen'
-#   gem 'capistrano', require: false
-#   gem 'capistrano-bundler', require: false
-#   gem 'capistrano-rails', require: false
-#   gem 'capistrano-rvm', require: false
-#   gem 'capistrano-sidekiq', require: false
-#   gem 'capistrano3-unicorn'
+  gem 'capistrano', '3.5.0', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-rvm', require: false
+  gem 'capistrano-sidekiq', require: false
+  gem 'capistrano3-unicorn'
 end
 
 group :test, :development do
