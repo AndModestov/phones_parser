@@ -19,6 +19,7 @@ gem 'sidekiq'
 gem 'sinatra', '>= 1.3.0', require: nil
 gem 'puma'
 gem 'uglifier'
+gem 'unicorn'
 
 gem 'sdoc', group: :doc
 
@@ -29,7 +30,7 @@ group :development do
   gem 'capistrano-rails', require: false
   gem 'capistrano-rvm', require: false
   gem 'capistrano-sidekiq', require: false
-  gem 'capistrano3-unicorn'
+  gem 'capistrano3-unicorn', require: false
 end
 
 group :test, :development do
