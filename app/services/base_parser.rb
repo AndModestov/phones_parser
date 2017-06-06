@@ -4,7 +4,7 @@ class BaseParser
   PHONE_SERVICES = ['phonearea']
 
   def initialize(keyword)
-    @keyword = keyword
+    @keyword = keyword.gsub(' ', '+')
     @base_url = "#{self.class.name}::BASE_URL".constantize
   end
 

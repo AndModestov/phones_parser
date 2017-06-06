@@ -9,7 +9,7 @@ gem 'jquery-rails'
 gem 'jbuilder'
 gem 'slim-rails'
 gem "therubyracer"
-gem 'twitter-bootstrap-rails' #, git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'twitter-bootstrap-rails'
 gem 'dotenv'
 gem 'dotenv-deployment', require: 'dotenv/deployment'
 gem 'redis-rails'
@@ -33,10 +33,9 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
-  # gem 'factory_girl_rails'
   gem 'capybara'
   gem 'launchy'
-  gem 'capybara-webkit'
+  # gem 'capybara-webkit'
   gem 'database_cleaner'
 end
 
