@@ -2,6 +2,6 @@
 
 ### To use it, run:
 
-> sidekiq
+#### -> sidekiq
 
-> redis-server
+#### -> redis-server
